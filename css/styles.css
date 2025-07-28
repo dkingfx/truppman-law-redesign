@@ -1,15 +1,15 @@
 /* CSS Variables for easy theming */
 :root {
-    --primary-color: #B8860B;
-    --primary-dark: #8B6914;
-    --primary-light: #DAA520;
-    --secondary-color: #8B1538;
-    --secondary-light: #A0304E;
-    --text-color: #334155;
-    --text-light: #64748b;
-    --bg-light: #f8fafc;
+    --primary-color: #8B1538;
+    --primary-dark: #6B0E2B;
+    --primary-light: #A0304E;
+    --secondary-color: #2C1810;
+    --secondary-light: #4A2818;
+    --text-color: #2C1810;
+    --text-light: #6B5B47;
+    --bg-light: #F5F1E8;
     --white: #ffffff;
-    --border-color: #e2e8f0;
+    --border-color: #E8DCC6;
     --success-color: #22c55e;
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --font-serif: 'Merriweather', Georgia, serif;
