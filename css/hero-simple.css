@@ -1,0 +1,218 @@
+/* Simplified Hero Section - Text Aligned Right */
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 70vh; /* Shorter hero section */
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: right;
+    color: white;
+    z-index: 2;
+    max-width: 500px; /* Narrower content area */
+    margin-left: auto;
+    margin-right: 2rem; /* Add right margin to show office building */
+}
+
+.hero-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-logo-image {
+    height: 80px; /* Smaller logo for shorter hero */
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.hero-title {
+    font-size: 2.8rem; /* Smaller title for shorter hero */
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem; /* Reduced margin */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem; /* Smaller subtitle */
+    line-height: 1.5;
+    margin-bottom: 1.5rem; /* Reduced margin */
+    opacity: 0.95;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 1rem; /* Smaller gap */
+    margin-bottom: 1.5rem; /* Reduced margin */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.stat {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0.75rem; /* Smaller padding */
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 90px; /* Smaller stats */
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem; /* Smaller numbers */
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.75rem; /* Smaller labels */
+    opacity: 0.9;
+    margin-top: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.hero-buttons .btn {
+    padding: 0.75rem 1.5rem; /* Smaller buttons */
+    font-size: 0.95rem; /* Smaller text */
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-buttons .btn-light {
+    background: #ffffff;
+    color: var(--primary-color);
+    border: 2px solid transparent;
+}
+
+.hero-buttons .btn-light:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.hero-buttons .btn-outline-light {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.hero-buttons .btn-outline-light:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 60vh; /* Even shorter on mobile */
+        background-attachment: scroll;
+    }
+    
+    .hero-content {
+        margin-right: 1rem; /* Smaller right margin on mobile */
+        max-width: 100%; /* Full width on mobile */
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-stats {
+        gap: 1rem;
+    }
+    
+    .stat {
+        padding: 1rem 0.75rem;
+        min-width: 100px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .hero-logo-image {
+        height: 80px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .hero-logo-image {
+        height: 60px;
+        max-width: 150px;
+    }
+}

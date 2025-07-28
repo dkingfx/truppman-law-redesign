@@ -19,8 +19,9 @@
     <link rel="stylesheet" href="css/enhanced-styles.css">
     <link rel="stylesheet" href="css/navbar-fixes.css">
     <link rel="stylesheet" href="css/logo-optimization.css">
-    <link rel="stylesheet" href="css/hero-redesign.css">
+    <link rel="stylesheet" href="css/hero-fixed.css">
     <link rel="stylesheet" href="css/language-system.css">
+    <link rel="stylesheet" href="css/practice-areas-fix.css">
 </head>
 <body>
     <!-- Header -->
@@ -39,19 +40,29 @@
                             239-922-3888 / 305-374-7974
                         </span>
                     </div>
-                    <div class="language-selector">
-                        <div class="language-flags">
-                            <span class="flag-icon active" data-lang="en" title="English">🇺🇸</span>
-                            <span class="flag-icon" data-lang="fr" title="French">🇫🇷</span>
-                            <span class="flag-icon" data-lang="pt" title="Portuguese">🇧🇷</span>
-                            <span class="flag-icon" data-lang="es" title="Spanish">🇪🇸</span>
+                    <div class="top-bar-actions">
+                        <div class="language-selector">
+                            <div class="language-flags">
+                                <span class="flag-icon active" data-lang="en" title="English">🇺🇸</span>
+                                <span class="flag-icon" data-lang="fr" title="French">🇫🇷</span>
+                                <span class="flag-icon" data-lang="pt" title="Portuguese">🇧🇷</span>
+                                <span class="flag-icon" data-lang="es" title="Spanish">🇪🇸</span>
+                            </div>
+                            <select id="language-select">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="pt">Português</option>
+                                <option value="zh">Chinese (Traditional)</option>
+                                <option value="nl">Dutch</option>
+                                <option value="de">German</option>
+                                <option value="ht">Haitian Creole</option>
+                                <option value="it">Italian</option>
+                                <option value="no">Norwegian</option>
+                                <option value="ru">Russian</option>
+                            </select>
                         </div>
-                        <select id="language-select" style="display: none;">
-                            <option value="en">English</option>
-                            <option value="es">Español</option>
-                            <option value="fr">Français</option>
-                            <option value="pt">Português</option>
-                        </select>
+                        <a href="pages/contact.html" class="top-bar-cta">Free Consultation</a>
                     </div>
                 </div>
             </div>
@@ -104,8 +115,7 @@
                         <li><a href="pages/news.html">News</a></li>
                     </ul>
 
-                    <!-- CTA Button -->
-                    <a href="pages/contact.html" class="btn btn-primary nav-cta">Free Consultation</a>
+                    <!-- CTA Button removed to prevent overlap -->
 
                     <!-- Mobile Menu Toggle -->
                     <button class="mobile-menu-toggle" id="mobile-menu-toggle">
@@ -148,7 +158,6 @@
                 <li><a href="pages/divorce-law.html">Divorce Law</a></li>
                 <li><a href="pages/contact.html">Contact Us</a></li>
                 <li><a href="pages/news.html">News</a></li>
-                <li><a href="pages/contact.html" class="btn btn-primary">Free Consultation</a></li>
             </ul>
         </div>
     </header>
@@ -156,66 +165,24 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-background.jpg');">
+        <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/Harold-Truppman-Office.png');">
             <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-content">
-                        <h1 class="hero-title" data-translate="hero.title">Trusted Legal Representation in Florida</h1>
-                        <p class="hero-subtitle" data-translate="hero.subtitle">
-                            With over 30 years of experience, Harold B. Klite Truppman provides dedicated legal services 
-                            across Fort Myers and Miami. From insurance claims to commercial litigation, we fight for 
-                            your rights and deliver results.
-                        </p>
-                        <div class="hero-stats">
-                            <div class="stat">
-                                <span class="stat-number">30+</span>
-                                <span class="stat-label" data-translate="hero.years-experience">Years Experience</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">1000+</span>
-                                <span class="stat-label" data-translate="hero.cases-won">Cases Won</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">2</span>
-                                <span class="stat-label" data-translate="hero.florida-locations">Florida Locations</span>
-                            </div>
-                        </div>
-                        <div class="hero-buttons">
-                            <a href="pages/contact.html" class="btn btn-light" data-translate="hero.get-consultation">Get Free Consultation</a>
-                            <a href="tel:239-922-3888" class="btn btn-outline-light">
-                                <i class="fas fa-phone"></i> <span data-translate="hero.call">Call: 239-922-3888</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="hero-info-panel">
-                        <div class="logo-section">
-                            <img src="images/Harold-Klite-Truppman-Miami-Law-Office-1.png" alt="Truppman Law - Fort Myers & Miami Florida Law Firm" class="logo-image">
-                            <h3>Harold B. Klite Truppman</h3>
-                            <p class="subtitle">Attorney at Law</p>
-                        </div>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <strong>Fort Myers</strong>
-                                    <p>239-922-3888</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <strong>Miami</strong>
-                                    <p>305-374-7974</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <strong>Email</strong>
-                                    <a href="mailto:hbkt@truppmanlawoffices.com">hbkt@truppmanlawoffices.com</a>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Left column - empty to show office building background -->
+                <div class="hero-background-space"></div>
+                
+                <!-- Right column - content -->
+                <div class="hero-content">
+                    <h1 class="hero-title" data-translate="hero.title">Trusted Legal Representation in Florida</h1>
+                    <p class="hero-subtitle" data-translate="hero.subtitle">
+                        With over 30 years of experience, Harold B. Klite Truppman provides dedicated legal services 
+                        across Fort Myers and Miami. From insurance claims to commercial litigation, we fight for 
+                        your rights and deliver results.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="pages/contact.html" class="btn btn-light" data-translate="hero.get-consultation">Free Consultation</a>
+                        <a href="tel:239-922-3888" class="btn btn-outline-light">
+                            <i class="fas fa-phone"></i> <span data-translate="hero.call">Call Now</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -268,7 +235,7 @@
                         <span class="practice-area-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </a>
                     
-                    <a href="pages/real-estate.html" class="practice-area-card">
+                    <a href="pages/real-estate.html" class="practice-area-card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/Real-Estate-Law-Miami-Fort-Myers-Florida-300x300.jpg');">
                         <div class="practice-area-icon">
                             <i class="fas fa-home"></i>
                         </div>

@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../css/navbar-fixes.css">
     <link rel="stylesheet" href="../css/logo-optimization.css">
     <link rel="stylesheet" href="../css/about-credentials.css">
+    <link rel="stylesheet" href="../css/language-system.css">
 </head>
 <body>
     <!-- Header -->
@@ -38,21 +39,29 @@
                             239-922-3888 / 305-374-7974
                         </span>
                     </div>
-                    <div class="language-selector">
-                        <i class="fas fa-globe"></i>
-                        <select id="language-select">
-                            <option value="en">English</option>
-                            <option value="es">Español</option>
-                            <option value="fr">Français</option>
-                            <option value="pt">Português</option>
-                            <option value="zh">Chinese (Traditional)</option>
-                            <option value="nl">Dutch</option>
-                            <option value="de">German</option>
-                            <option value="ht">Haitian Creole</option>
-                            <option value="it">Italian</option>
-                            <option value="no">Norwegian</option>
-                            <option value="ru">Russian</option>
-                        </select>
+                    <div class="top-bar-actions">
+                        <div class="language-selector">
+                            <div class="language-flags">
+                                <span class="flag-icon active" data-lang="en" title="English">🇺🇸</span>
+                                <span class="flag-icon" data-lang="fr" title="French">🇫🇷</span>
+                                <span class="flag-icon" data-lang="pt" title="Portuguese">🇧🇷</span>
+                                <span class="flag-icon" data-lang="es" title="Spanish">🇪🇸</span>
+                            </div>
+                            <select id="language-select">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="pt">Português</option>
+                                <option value="zh">Chinese (Traditional)</option>
+                                <option value="nl">Dutch</option>
+                                <option value="de">German</option>
+                                <option value="ht">Haitian Creole</option>
+                                <option value="it">Italian</option>
+                                <option value="no">Norwegian</option>
+                                <option value="ru">Russian</option>
+                            </select>
+                        </div>
+                        <a href="contact.html" class="top-bar-cta">Free Consultation</a>
                     </div>
                 </div>
             </div>
@@ -105,8 +114,7 @@
                         <li><a href="news.html">NEWS</a></li>
                     </ul>
 
-                    <!-- CTA Button -->
-                    <a href="contact.html" class="btn btn-primary nav-cta">Free Consultation</a>
+                    <!-- CTA Button removed to prevent overlap -->
 
                     <!-- Mobile Menu Toggle -->
                     <button class="mobile-menu-toggle" id="mobile-menu-toggle">
@@ -164,36 +172,6 @@
             </div>
         </section>
 
-        <!-- About Content -->
-        <section class="section">
-            <div class="container">
-                <div class="content-wrapper">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h2>Our Firm</h2>
-                            <p class="lead">
-                                Truppman Law has been serving the legal needs of individuals, families, and businesses 
-                                throughout Florida for over three decades. Our commitment to excellence and personalized 
-                                service has made us a trusted name in the legal community.
-                            </p>
-                            <p>
-                                Based in Fort Myers with additional service in Miami, we understand the unique legal 
-                                challenges facing Florida residents. Our comprehensive approach to legal representation 
-                                ensures that our clients receive the attention and expertise they deserve.
-                            </p>
-                            <p>
-                                We pride ourselves on our ability to handle complex legal matters while maintaining 
-                                the personal touch that sets us apart from larger firms. Every client receives direct 
-                                access to experienced attorneys who are committed to achieving the best possible outcomes.
-                            </p>
-                        </div>
-                        <div>
-                            <img src="../images/Harold-Klite-Truppman-Miami-Law-Office-1.png" alt="Truppman Law Office" class="w-full rounded-lg shadow-lg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Attorney Profile -->
         <section class="section bg-light">
@@ -368,5 +346,6 @@
     <!-- Scripts -->
     <script src="../js/main.js"></script>
     <script src="../js/enhanced-interactions.js"></script>
+    <script src="../js/language-switcher.js"></script>
 </body>
 </html>

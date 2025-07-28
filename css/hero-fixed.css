@@ -1,0 +1,187 @@
+/* Two-Column Hero Section - Left Empty for Background, Right for Content */
+
+.hero {
+    background-size: cover;
+    background-position: left center; /* Show office building on left */
+    background-attachment: fixed;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Left column - empty to show background */
+.hero-background-space {
+    /* Empty space to showcase the office building */
+    min-height: 400px;
+}
+
+.hero-content {
+    /* Remove white background - just text on transparent background */
+    padding: 3rem 2rem;
+    text-align: left;
+    color: white;
+}
+
+/* Logo removed for cleaner design */
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+/* Stats removed for cleaner design */
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.hero-buttons .btn {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    min-width: 180px;
+    flex: 1;
+}
+
+.hero-buttons .btn-light {
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid white;
+    font-weight: 700;
+}
+
+.hero-buttons .btn-light:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.hero-buttons .btn-outline-light {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    font-weight: 700;
+}
+
+.hero-buttons .btn-outline-light:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero .container {
+        grid-template-columns: 1fr; /* Single column on tablets */
+        text-align: center;
+    }
+    
+    .hero-background-space {
+        display: none; /* Hide empty space on smaller screens */
+    }
+    
+    .hero-content {
+        margin: 0 auto;
+        padding: 2.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 65vh;
+        background-attachment: scroll;
+        background-position: center;
+    }
+    
+    .hero-content {
+        padding: 2rem;
+        margin: 1rem;
+        max-width: calc(100% - 2rem);
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-stats {
+        gap: 1rem;
+        flex-direction: column;
+    }
+    
+    .stat {
+        padding: 1rem 0.75rem;
+        min-width: auto;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .hero-logo-image {
+        height: 80px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-logo-image {
+        height: 60px;
+        max-width: 150px;
+    }
+}

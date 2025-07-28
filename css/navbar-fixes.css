@@ -47,7 +47,7 @@
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 0.6rem; /* Minimal gap to prevent wrapping */
+    gap: 0.3rem; /* Very tight gap to prevent wrapping */
     align-items: center;
     margin: 0;
     padding: 0;
@@ -62,16 +62,16 @@
 .nav-menu a {
     color: var(--text-color);
     font-weight: 500;
-    font-size: 0.8rem; /* Even smaller font to prevent wrapping */
+    font-size: 0.85rem; /* Larger, more readable font */
     transition: color 0.3s ease;
     text-decoration: none;
-    padding: 0.5rem 0.3rem; /* Minimal horizontal padding */
+    padding: 0.5rem 0.4rem; /* Better padding */
     border-radius: 4px;
     display: block;
     text-transform: uppercase; /* Make menu items uppercase */
-    letter-spacing: 0.2px; /* Minimal letter spacing */
+    letter-spacing: 0.3px; /* Better letter spacing */
     white-space: nowrap; /* Prevent text wrapping */
-    line-height: 1.2; /* Tighter line height */
+    line-height: 1.2; /* Better line height */
 }
 
 .nav-menu a:hover,
@@ -82,13 +82,13 @@
 
 /* Improved CTA Button */
 .nav-cta {
-    padding: 0.4rem 0.8rem !important; /* Even smaller padding */
-    font-size: 0.75rem !important; /* Smaller font */
+    padding: 0.5rem 1rem !important; /* Better padding */
+    font-size: 0.8rem !important; /* Larger font */
     font-weight: 600;
     border-radius: 6px;
     white-space: nowrap;
     flex-shrink: 0;
-    margin-left: 0.5rem; /* Reduced margin */
+    margin-left: 0.5rem; /* Better margin */
 }
 
 /* Dropdown Menu Improvements */
@@ -188,11 +188,37 @@
     font-size: 0.75rem; /* Smaller icons */
 }
 
+/* Top Bar Actions */
+.top-bar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 /* Language Selector Improvements */
 .language-selector {
     display: flex;
     align-items: center;
     gap: 0.4rem;
+}
+
+/* Top Bar CTA Button */
+.top-bar-cta {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.top-bar-cta:hover {
+    background: var(--white);
+    color: var(--secondary-color);
 }
 
 .language-selector select {
