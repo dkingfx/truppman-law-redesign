@@ -1,10 +1,10 @@
 /* CSS Variables for easy theming */
 :root {
-    --primary-color: #0369a1;
-    --primary-dark: #075985;
-    --primary-light: #0ea5e9;
-    --secondary-color: #1e293b;
-    --secondary-light: #334155;
+    --primary-color: #B8860B;
+    --primary-dark: #8B6914;
+    --primary-light: #DAA520;
+    --secondary-color: #8B1538;
+    --secondary-light: #A0304E;
     --text-color: #334155;
     --text-light: #64748b;
     --bg-light: #f8fafc;
@@ -580,6 +580,22 @@ img {
     background-color: var(--secondary-color);
     color: var(--white);
     text-align: center;
+}
+
+/* Legal Disclaimer */
+.legal-disclaimer {
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 0;
+}
+
+.disclaimer-text {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    text-align: center;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .cta h2 {
