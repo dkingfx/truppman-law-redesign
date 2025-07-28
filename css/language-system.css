@@ -1,0 +1,255 @@
+/* Multi-Language System Styling */
+
+/* Language Indicator Floating Widget */
+.language-indicator {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    max-width: 200px;
+}
+
+.language-indicator:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.language-indicator-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.language-indicator-header i {
+    color: var(--primary-color);
+}
+
+.language-flags {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    justify-items: center;
+}
+
+.lang-flag {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.25rem;
+    border-radius: 6px;
+    border: 2px solid transparent;
+}
+
+.lang-flag:hover {
+    transform: scale(1.2);
+    background: rgba(3, 105, 161, 0.1);
+    border-color: rgba(3, 105, 161, 0.3);
+}
+
+.lang-flag.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(3, 105, 161, 0.3);
+    transform: scale(1.1);
+}
+
+/* Enhanced Language Selector in Header */
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.language-flags {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.flag-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.25rem;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    opacity: 0.7;
+}
+
+.flag-icon:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.flag-icon.active {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.language-selector::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8px;
+    height: 8px;
+    background: #00ff00;
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.language-selector select {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.language-selector select:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.language-selector select option {
+    background-color: var(--white);
+    color: var(--text-color);
+    padding: 0.5rem;
+}
+
+/* Multi-language support badge */
+.multilingual-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #0369a1, #0284c7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    box-shadow: 0 4px 12px rgba(3, 105, 161, 0.3);
+}
+
+.multilingual-badge i {
+    font-size: 1rem;
+}
+
+/* Language switching animation */
+.language-switching {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.language-switched {
+    animation: fadeInContent 0.5s ease;
+}
+
+@keyframes fadeInContent {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .language-indicator {
+        right: 10px;
+        padding: 0.75rem;
+        max-width: 150px;
+    }
+    
+    .language-flags {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.25rem;
+    }
+    
+    .lang-flag {
+        font-size: 1.25rem;
+        padding: 0.2rem;
+    }
+    
+    .language-indicator-header {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-indicator {
+        position: static;
+        transform: none;
+        margin: 1rem;
+        right: auto;
+    }
+    
+    .language-flags {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* Language-specific styling adjustments */
+[lang="ar"], [lang="he"] {
+    direction: rtl;
+    text-align: right;
+}
+
+[lang="zh"], [lang="ja"], [lang="ko"] {
+    font-family: 'Noto Sans CJK', 'Source Han Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7;
+}
+
+[lang="ru"] {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Translation loading states */
+.translation-loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.translation-loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}

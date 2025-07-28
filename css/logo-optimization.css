@@ -1,0 +1,147 @@
+/* Optimized Logo Styles - Image Only */
+
+/* Simplified Logo Layout */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Optimized Logo Image Sizing */
+.logo-image {
+    height: 48px; /* Slightly larger since no text competition */
+    width: auto;
+    max-width: 180px; /* Allow more width for horizontal logos */
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.logo:hover .logo-image {
+    box-shadow: 0 4px 15px rgba(3, 105, 161, 0.25);
+}
+
+/* Remove all text-based logo styles since we're not using them */
+.logo-text-container,
+.logo-text,
+.logo-subtitle {
+    display: none;
+}
+
+/* Responsive Logo Adjustments */
+@media (max-width: 1200px) {
+    .logo-image {
+        height: 44px;
+        max-width: 160px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .logo-image {
+        height: 42px;
+        max-width: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 38px;
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        height: 35px;
+        max-width: 100px;
+    }
+}
+
+/* Enhanced Navigation Layout with Optimized Logo */
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    gap: 2rem; /* Add gap for better spacing */
+}
+
+/* Better Menu Positioning */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.75rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* More space for CTA button now that logo is smaller */
+.nav-cta {
+    padding: 0.6rem 1.25rem !important;
+    font-size: 0.9rem !important;
+    font-weight: 600;
+    border-radius: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-left: auto; /* Push to the right */
+}
+
+/* Enhanced hover effect for logo */
+.logo::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(3, 105, 161, 0.05);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.logo:hover::before {
+    opacity: 1;
+}
+
+/* Logo accessibility */
+.logo:focus {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+.logo:focus .logo-image {
+    box-shadow: 0 4px 15px rgba(3, 105, 161, 0.3);
+}
+
+/* Ensure proper spacing distribution */
+@media (min-width: 1025px) {
+    .nav-content {
+        grid-template-columns: 200px 1fr auto; /* Logo | Menu | CTA */
+        display: grid;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .nav-menu {
+        justify-self: center;
+    }
+    
+    .nav-cta {
+        justify-self: end;
+        margin-left: 0;
+    }
+}
